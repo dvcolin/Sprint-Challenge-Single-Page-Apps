@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const LocationName = styled.h3`
+const EpisodeName = styled.h3`
   font-size: 1.6rem;
 `;
 
-const LocationInfo = styled.p`
+const EpisodeInfo = styled.p`
   font-size: 1.4rem;
 `;
 
-export default function LocationCard ({ name, type, dimension, residents }) {
+export default function EpisodeCard ({ name, episode, airDate }) {
   const style ={
     width: '45%',
     background: 'teal',
@@ -22,10 +22,9 @@ export default function LocationCard ({ name, type, dimension, residents }) {
   // image={image}
   return (
     <div style={style}>
-      <LocationName>{name}</LocationName>
-      <LocationInfo>{type}</LocationInfo>
-      <LocationInfo>{dimension}</LocationInfo>
-      <LocationInfo>Number of Residents: {residents}</LocationInfo>
+      <EpisodeName>{name}</EpisodeName>
+      <EpisodeInfo>{episode}</EpisodeInfo>
+      <EpisodeInfo>{airDate}</EpisodeInfo>
     </div>
   );
 }

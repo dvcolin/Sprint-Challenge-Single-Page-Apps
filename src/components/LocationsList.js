@@ -13,6 +13,7 @@ export default function LocationsList() {
 
     .then(res => {
       setLocations(res.data.results);
+      console.log(res.data.results);
     })
 
     .catch(err => {
@@ -23,7 +24,7 @@ export default function LocationsList() {
 
   return <section className='location-list grid-view'>
 
-      {locations.map(loc => <LocationCard name={loc.name} />)}
+      {locations.map(loc => <LocationCard name={loc.name} type={loc.type} dimension={loc.dimension} residents={loc.residents.length} />)}
     </section>
 
 }

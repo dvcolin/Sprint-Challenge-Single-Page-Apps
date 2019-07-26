@@ -13,7 +13,6 @@ export default function CharacterList() {
 
     .then(res => {
       setCharacters(res.data.results);
-      console.log(res.data.results);
     })
 
     .catch(err => {
