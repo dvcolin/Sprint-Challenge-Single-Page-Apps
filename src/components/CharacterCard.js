@@ -20,12 +20,14 @@ export default function CharacterCard ({ image, name, species, status, origin })
 
   const style ={
     width: '45%',
-    background: 'teal',
+    background: '#d7f7f0',
     padding: '1.5rem',
     margin: '1.5rem 1rem',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
+    borderRadius: '5px',
+    border: '1px solid gray'
   }
 
   return (

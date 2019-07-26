@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const EpisodeName = styled.h3`
   font-size: 1.6rem;
+  text-align: center;
 `;
 
 const EpisodeInfo = styled.p`
@@ -12,12 +13,14 @@ const EpisodeInfo = styled.p`
 export default function EpisodeCard ({ name, episode, airDate }) {
   const style ={
     width: '45%',
-    background: 'teal',
+    background: '#d7f7f0',
     padding: '1.5rem',
     margin: '1.5rem 1rem',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
+    borderRadius: '5px',
+    border: '1px solid gray'
   }
   // image={image}
   return (
