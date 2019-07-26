@@ -13,7 +13,6 @@ export default function LocationsList() {
 
     .then(res => {
       setLocations(res.data.results);
-      console.log(res.data.results);
     })
 
     .catch(err => {
