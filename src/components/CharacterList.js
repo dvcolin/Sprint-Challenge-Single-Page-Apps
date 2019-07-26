@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CharacterCard from './CharacterCard'
+import {ListHeader} from './ListHeader';
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -22,6 +23,7 @@ export default function CharacterList() {
   }, [characters])
 
   return <section className='character-list grid-view'>
+    <ListHeader>Characters</ListHeader>
 
       {characters.map(char => <CharacterCard key={char.id} image={char.image} name={char.name} species={char.species} status={char.status} origin={char.origin.name} />)}
     </section>

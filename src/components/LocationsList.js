@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import LocationCard from './LocationCard'
+import {ListHeader} from './ListHeader';
 
 export default function LocationsList() {
   // TODO: Add useState to track data from useEffect
@@ -22,6 +23,7 @@ export default function LocationsList() {
   }, [locations])
 
   return <section className='location-list grid-view'>
+    <ListHeader>Locations</ListHeader>
 
       {locations.map(loc => <LocationCard key={loc.id} name={loc.name} type={loc.type} dimension={loc.dimension} residents={loc.residents.length} />)}
     </section>

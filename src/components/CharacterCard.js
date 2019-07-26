@@ -10,6 +10,8 @@ const CharImg = styled.img`
 const CharName = styled.h2`
   font-size: 2.4rem;
   text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid gray;
 `;
 
 const CharInfo = styled.p`
@@ -18,23 +20,12 @@ const CharInfo = styled.p`
 
 export default function CharacterCard ({ image, name, species, status, origin }) {
 
-  const style ={
-    width: '45%',
-    background: '#d7f7f0',
-    padding: '1.5rem',
-    margin: '1.5rem 1rem',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    borderRadius: '5px',
-    border: '1px solid gray'
-  }
-
   return (
-  <div style={style}>
+  <div className='card'>
     <CharImg src={image} />
     <CharName>{name}</CharName>
-    <CharInfo>Species: {species} - {status}</CharInfo>
+    <CharInfo>Species: {species}</CharInfo>
+    <CharInfo>Status: {status}</CharInfo>
     <CharInfo>Origin: {origin}</CharInfo>
   </div>
   )

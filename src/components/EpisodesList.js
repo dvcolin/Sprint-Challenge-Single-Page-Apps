@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import EpisodeCard from './EpisodeCard'
+import {ListHeader} from './ListHeader';
 
 export default function EpisodesList() {
   // TODO: Add useState to track data from useEffect
@@ -22,6 +23,7 @@ export default function EpisodesList() {
   }, [episodes])
 
   return <section className='episode-list grid-view'>
+    <ListHeader>Episodes</ListHeader>
 
       {episodes.map(ep => <EpisodeCard key={ep.id} name={ep.name} episode={ep.episode} airDate={ep.air_date} />)}
     </section>
