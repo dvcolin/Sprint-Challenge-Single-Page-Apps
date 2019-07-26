@@ -11,7 +11,5 @@ export default function App() {
     <Header />
     <TabNav />
     <AppRouter />
-    <LocationsList />
-    <EpisodesList />
   </main>
 }
